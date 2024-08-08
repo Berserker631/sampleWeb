@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <div class="header">
+    <div class="presentation">
+      <img src="../assets/roofing.png" alt="miss">
+      <p>Roofing 101 Corp</p>
+    </div>
+    <div class="menu">
+    </div>
+  </div>
+  <div class="body">
+    <div class="image-gallery">
+      @for (slide of images; track $index) {
+        @if (vaCurrentSlide == $index) {
+            @if (slide.img) 
+            {
+              <img class="leyend_img" [src]="slide.img">
+            }
+          }
+        }
+    </div>
+    <div class="leyend">
+      <h1>About us</h1>
+      <h4>En Roofing 101 Corp, nos enorgullece ser la elección principal cuando se trata de sus necesidades de roofing. 
+        Ya sea que necesite una reparación rápida, una instalación completa o un servicio de mantenimiento regular, 
+        nuestro equipo altamente capacitado está listo para ofrecer soluciones confiables y duraderas.</h4>
+    </div>
+  </div>
+</div>
